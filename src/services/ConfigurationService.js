@@ -106,7 +106,7 @@ balance of this freshwater ecosystem and its biodiversity?" A debatable question
             userPrompt: `Review the following inquiry-based lesson plan: {unit_plan.unit_plan} and identify the essential knowledge that students will acquire through the lesson. 
 Specifically, outline the required background knowledge, essential skills needed, and key concepts that student need to know to successfully engage in the inquiry-based learning processes.`,
             temperature: 0.7,
-            model: 'MODEL_GPT_4O',
+            model: 'MODEL_CLAUDE_3_HAIKU',
             variableTokens: ['{unit_plan.unit_plan}', '{unit_plan.temperature}']
           },
           order: 3,
@@ -115,7 +115,16 @@ Specifically, outline the required background knowledge, essential skills needed
           outputField: 'essential_knowledge',
         }
       ],
-      defaultModels: ['MODEL_GPT_4O', 'MODEL_GPT_4O_2024_08_06', 'MODEL_O3_MINI'],
+      defaultModels: [
+        // OpenAI models
+        'MODEL_GPT_4O', 
+        'MODEL_GPT_4O_2024_08_06', 
+        'MODEL_O3_MINI',
+        // Anthropic models
+        'MODEL_CLAUDE_3_OPUS',
+        'MODEL_CLAUDE_3_SONNET',
+        'MODEL_CLAUDE_3_HAIKU'
+      ],
       version: '1.0',
     };
   }

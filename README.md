@@ -1,14 +1,126 @@
 # Prompt Management System
 
-A React-based UI for managing and customizing AI prompt templates.
+A comprehensive UI for managing and customizing AI prompt templates. This application allows you to create, edit, and test prompts for various AI models from OpenAI and Anthropic.
 
 ## Features
 
-- Create, edit, and delete function configurations
-- Customize system and user prompts with a rich editor
-- Test prompt execution with a preview feature
-- Manage variable tokens for dynamic prompt generation
-- Persistent configuration storage
+- Create and manage function-based prompt templates
+- Edit system and user prompts with a rich code editor
+- Test prompts with real AI models
+- View token usage statistics
+- Support for multiple AI providers (OpenAI and Anthropic)
+- Variable substitution in prompts
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- API keys for OpenAI and/or Anthropic
+
+### Installation
+
+1. Clone the repository:
+```
+git clone https://github.com/yourusername/prompt-management-system.git
+cd prompt-management-system
+```
+
+2. Install dependencies:
+```
+npm install
+```
+
+3. Create a `.env` file in the root directory with your API keys:
+```
+REACT_APP_OPENAI_API_KEY=your_openai_api_key
+REACT_APP_ANTHROPIC_API_KEY=your_anthropic_api_key
+```
+
+4. Start the development server:
+```
+npm start
+```
+
+## API Integration
+
+This application integrates with the following AI providers:
+
+### OpenAI
+
+- Models supported:
+  - GPT-4o
+  - GPT-4o (2024-08-06)
+  - GPT-3.5 Turbo
+
+### Anthropic
+
+- Models supported:
+  - Claude 3 Opus
+  - Claude 3 Sonnet
+  - Claude 3 Haiku
+
+## Environment Variables
+
+The following environment variables are used:
+
+- `REACT_APP_OPENAI_API_KEY`: Your OpenAI API key
+- `REACT_APP_ANTHROPIC_API_KEY`: Your Anthropic API key
+
+## Deployment
+
+### Deploying to Render
+
+1. Sign up for a [Render account](https://render.com/) if you don't have one.
+
+2. From the Render dashboard, click "New" and select "Static Site".
+
+3. Connect your GitHub repository or upload your code directly.
+
+4. Configure your static site with the following settings:
+   - **Name**: prompt-management-system (or your preferred name)
+   - **Build Command**: `npm install && npm run build`
+   - **Publish Directory**: `build`
+   - **Environment Variables**: Add your API keys as environment variables
+
+5. Click "Create Static Site".
+
+6. Render will automatically build and deploy your application. Once complete, you can access it at the provided URL.
+
+## Usage
+
+1. **Creating a New Function**:
+   - Click the "+" tab to create a new function
+   - Fill in the function properties
+   - Edit the system and user prompts
+   - Save the function
+
+2. **Testing a Function**:
+   - Select the function from the tabs
+   - Click "Run Test" to test the function with sample data
+   - View the results and token usage statistics
+
+3. **Editing a Function**:
+   - Select the function from the tabs
+   - Edit the function properties and prompts
+   - Click "Save" to save your changes
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- [React](https://reactjs.org/)
+- [Material-UI](https://mui.com/)
+- [Monaco Editor](https://microsoft.github.io/monaco-editor/)
+- [OpenAI API](https://openai.com/api/)
+- [Anthropic API](https://www.anthropic.com/)
 
 ## Deployment to Render
 
