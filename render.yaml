@@ -1,0 +1,16 @@
+services:
+  # Static site service
+  - type: web
+    name: prompt-management-system
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: 16
+      - key: NODE_ENV
+        value: production 
